@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="register-link">
+            <arguments>
+                <argument name="class" xsi:type="string">customer-register-link</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="authorization-link-login">
+            <arguments>
+                <argument name="class" xsi:type="string">customer-login-link</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceContainer name="before.body.end">
+            <block class="TrainingJaymin\CustomerAccount\Block\Form\Login"
+                   name="customer-popup-login"
+                   template="TrainingJaymin_CustomerAccount::login.phtml" />
+            <block class="TrainingJaymin\CustomerAccount\Block\Form\Register"
+                   name="customer-popup-register"
+                   template="TrainingJaymin_CustomerAccount::register.phtml" />
+        </referenceContainer>
+    </body>
+</page>
