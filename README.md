@@ -15,3 +15,5 @@ Tasks added so far in this repository:
    	c. Based upon the product setting, add JavaScript timer countdown in product view page.
    
    	d. Remove the counter automatically after the deal ends.
+   	
+4. Create a script in which we can update qty and stock status using magento default API.
