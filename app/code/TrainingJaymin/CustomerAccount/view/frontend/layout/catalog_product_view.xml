@@ -1,0 +1,12 @@
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product.info.details">
+            <block class="Magento\Cms\Block\Block" name="product.helloworld.tab" as="helloworld.tab" group="detailed_info" >
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">Hello World</argument>
+                    <argument name="block_id" xsi:type="string">hello-world</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

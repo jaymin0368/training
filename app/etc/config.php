@@ -139,6 +139,7 @@ return array (
     'Magento_WishlistSampleData' => 1,
     'Shopial_Facebook' => 1,
     'Temando_Shipping' => 1,
+    'TrainingJaymin_CountdownTimer' => 1,
     'TrainingJaymin_CustomerAccount' => 1,
   ),
 );
