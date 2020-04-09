@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      layout="3columns" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="sidebar.main">
+            <block class="TrainingJaymin\StaticBlock\Block\Newmodule"
+                   name="trainingjaymin_staticblock1" template="newmodule.phtml"></block>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block class="TrainingJaymin\StaticBlock\Block\Newmodule"
+                   name="trainingjaymin_staticblock2" template="newmodule2.phtml"></block>
+        </referenceContainer>
+        <referenceBlock name="wishlist_sidebar" remove="true"/>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceContainer name="sidebar.additional">
+            <container name="fsd" htmlTag="div">
+                <block class="TrainingJaymin\StaticBlock\Block\Newmodule" name="trainingjaymin_staticblock3"
+                       template="newmodule3.phtml"/>
+            </container>
+        </referenceContainer>
+
+    </body>
+</page>

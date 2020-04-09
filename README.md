@@ -17,3 +17,11 @@ Tasks added so far in this repository:
    	d. Remove the counter automatically after the deal ends.
    	
 4. Create a script in which we can update qty and stock status using magento default API.
+
+7. Static blocks in custom layout - Estimated Hours (4 hours) - Completed
+
+	a. Create tree static blocks with lorem ipsum values.
+
+	b. Custom Module: On specific action(http://baseurl/yourmodule/controller/action) setup 3-column layout page.
+
+	c. Now, call those static blocks into this page. One in content, second in left, and third one in right Panel

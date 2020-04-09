@@ -141,5 +141,6 @@ return array (
     'Temando_Shipping' => 1,
     'TrainingJaymin_CountdownTimer' => 1,
     'TrainingJaymin_CustomerAccount' => 1,
+    'TrainingJaymin_StaticBlock' => 1,
   ),
 );

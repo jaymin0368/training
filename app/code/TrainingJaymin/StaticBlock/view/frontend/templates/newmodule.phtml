@@ -1,0 +1,8 @@
+<span style="font-weight: 400;">This is custom front view.</span>
+
+<?php
+echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('staticblock1')
+    ->toHtml();
+?>
