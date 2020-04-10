@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="TrainingJaymin_IpRestriction::ipaddress" title="IP Address"
+             module="TrainingJaymin_IpRestriction" sortOrder="51" resource="TrainingJaymin_IpRestriction::ipaddress"/>
+        <add id="TrainingJaymin_IpRestriction::manageipaddress" title="Manage Ip Addresses"
+             module="TrainingJaymin_IpRestriction" sortOrder="10"
+             action="ipaddress/post" resource="TrainingJaymin_IpRestriction::post"
+             parent="TrainingJaymin_IpRestriction::ipaddress"/>
+    </menu>
+</config>

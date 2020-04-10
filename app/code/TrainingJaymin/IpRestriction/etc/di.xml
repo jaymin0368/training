@@ -1,0 +1,18 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="ipaddress_post_listing_data_source" xsi:type="string">
+                    TrainingJaymin\IpRestriction\Model\ResourceModel\CustomIpAddress\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="TrainingJaymin\IpRestriction\Model\ResourceModel\CustomIpAddress\Grid\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">custom_ip_addresses</argument>
+            <argument name="resourceModel" xsi:type="string">
+                TrainingJaymin\IpRestriction\Model\ResourceModel\CustomIpAddress</argument>
+        </arguments>
+    </virtualType>
+</config>

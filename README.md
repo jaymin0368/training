@@ -25,3 +25,10 @@ Tasks added so far in this repository:
 	b. Custom Module: On specific action(http://baseurl/yourmodule/controller/action) setup 3-column layout page.
 
 	c. Now, call those static blocks into this page. One in content, second in left, and third one in right Panel
+
+5. Customer Login IP Restriction:
+ 
+    a. Using Rewrite Model/Observers, built a functionality where customers can login with some allowed ip-addresses.
+    
+    b. In the admin panel, manage this ip-addresses with custom GRID.
+    
