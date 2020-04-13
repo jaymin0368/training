@@ -2,6 +2,12 @@
 /**
 
 /** @var \TrainingJaymin\CustomerAccount\Block\Form\Register $block */
+
+$fathersname = $this->helper('TrainingJaymin\CustomerAccount\Helper\Data')
+    ->getConfig('helloworld/general/fathersname');
+
+$mothersname = $this->helper('TrainingJaymin\CustomerAccount\Helper\Data')
+    ->getConfig('helloworld/general/mothersname');
 ?>
 
 <?php if (!$block->customerIsAlreadyLoggedIn() && $block->getRegistration()->isAllowed()): ?>
@@ -60,6 +66,49 @@
                         <input type="password" name="password_confirmation" title="<?php /* @escapeNotVerified */ echo __('Confirm Password') ?>" id="password-confirmation" class="input-text" data-validate="{required:true, equalTo:'#password'}" autocomplete="off">
                     </div>
                 </div>
+            </fieldset>
+
+            <?php
+            if($mothersname == 1)
+            {
+            ?>
+
+            <fieldset class="fieldset create account" data-hasrequired="<?php /* @escapeNotVerified */
+            echo __('* Required Fields') ?>">
+                <legend class="legend"><span><?php /* @escapeNotVerified */
+                        echo __('Additional Information') ?></span></legend>
+                <p>
+                <div class="field regulation">
+                    <label for="regulation" class="label"><span><?php /* @escapeNotVerified */
+                            echo __('Mothers Name1') ?></span></label>
+                    <div class="control">
+                        <input type="text" name="mother_name" id="mother_name" title="<?php /* @escapeNotVerified */
+                        echo __('Mothers Name') ?>"
+                               class="input-text" data-validate="{required:false}">
+                    </div>
+                </div>
+                </p>
+                <?php
+                }
+                ?>
+                <?php
+                if($fathersname == 1)
+                {
+                    ?>
+                    <p>
+                    <div class="field regulation">
+                        <label for="regulation" class="label"><span><?php /* @escapeNotVerified */
+                                echo __('Fathers Name') ?></span></label>
+                        <div class="control">
+                            <input type="text" name="father_name" id="father_name" title="<?php /* @escapeNotVerified */
+                            echo __('Fathers Name') ?>"
+                                   class="input-text" data-validate="{required:false}">
+                        </div>
+                    </div>
+                    </p>
+                    <?php
+                }
+                ?>
             </fieldset>
             <div class="actions-toolbar">
                 <div class="primary">

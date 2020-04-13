@@ -17,11 +17,16 @@ class Index extends Action
      * @param Context $context
      * @param CustomIpAddressFactory $customIpAddressFactory
      */
+
+    protected $helperData;
+
     public function __construct(
         Context $context,
-        CustomIpAddressFactory $customIpAddressFactory
+        CustomIpAddressFactory $customIpAddressFactory,
+        \TrainingJaymin\IpRestriction\Helper\Data $helperData
     ) {
         parent::__construct($context);
+        $this->helperData = $helperData;
         $this->customIpAddressFactory = $customIpAddressFactory;
     }
 
@@ -54,6 +59,9 @@ class Index extends Action
             echo "Didint got Irix";
         }
         print_r($ip_allowed);
+
+        echo $this->helperData->getGeneralConfig('enable');
+        echo $this->helperData->getGeneralConfig('display_text');
 
     }
 }

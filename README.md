@@ -32,3 +32,15 @@ Tasks added so far in this repository:
     
     b. In the admin panel, manage this ip-addresses with custom GRID.
     
+9. Add one new customer attribute named as “Father’s Name” & “Mother’s Name”
+    
+    a.Add new customer attribute via UpgradeSchema
+    
+    b.Ask customers to add “Father’s Name” & “Mother’s Name” when creating a new account from frontend.
+    
+    c.Display “Father’s Name” & “Mother’s Name” value in backend customer account edit form as well as in frontend, which can be editable.
+    
+    d.Show attribute value in the customer account area in frontend, customer grid in backend.
+    
+    e.Add system configuration in Customer Configuration tab for Show “Father’s Name”  as Yes/No option  & “Mother’s Name” as Yes/No option , based on config value of “Father’s Name”  or “Mother’s Name” fields should be displayed or not in customer account create form and account dashboard in store front.
+    
