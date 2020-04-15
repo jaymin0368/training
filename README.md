@@ -43,4 +43,11 @@ Tasks added so far in this repository:
     d.Show attribute value in the customer account area in frontend, customer grid in backend.
     
     e.Add system configuration in Customer Configuration tab for Show “Father’s Name”  as Yes/No option  & “Mother’s Name” as Yes/No option , based on config value of “Father’s Name”  or “Mother’s Name” fields should be displayed or not in customer account create form and account dashboard in store front.
+11. Add order Processing Fee to Cart. Estimated Hours - (20 Hours)
+    
+    a. Add a new configuration in Store >> Configuration >> Sales  >> Order Fees , add two fields “Apply Additional Fee” with “Yes/No” options &  “Order Processing Fee” as a text field to add value in percent for additional fee. (Also show note below field “Add fee in %. This fee will be added to the product price as an additional fee”. 
+
+    b. When any product is added to cart, check if the “Apply Additional Fee” setting is set to “Yes” then add additional fee from configuration “Order Processing Fee”  to subtotal amount.
+
+    c. Same Fee will affect everywhere where order data is associated.
     
