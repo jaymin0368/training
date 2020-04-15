@@ -143,6 +143,7 @@ return array (
     'TrainingJaymin_CustomerAccount' => 1,
     'TrainingJaymin_CustomerAttribute' => 1,
     'TrainingJaymin_IpRestriction' => 1,
+    'TrainingJaymin_OrderProcessingFee' => 1,
     'TrainingJaymin_StaticBlock' => 1,
   ),
 );
