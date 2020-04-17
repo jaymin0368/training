@@ -50,4 +50,10 @@ Tasks added so far in this repository:
     b. When any product is added to cart, check if the “Apply Additional Fee” setting is set to “Yes” then add additional fee from configuration “Order Processing Fee”  to subtotal amount.
 
     c. Same Fee will affect everywhere where order data is associated.
+
+3. Create simple Module - Estimated Hours (12 Hours)
+    
+    a. Add/Update/Delete Module with following types of input elements: text, checkbox, drop-down, radio, multi-select, text-box, color-selection.
+    	
+    b.  Grid and Edit/Add Form should be manageable from both admin and front-end.
     
