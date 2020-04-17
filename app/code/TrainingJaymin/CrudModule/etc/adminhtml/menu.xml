@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="TrainingJaymin_CrudModule::customcrud" title="Crud Module"
+             module="TrainingJaymin_CrudModule" sortOrder="51" resource="TrainingJaymin_CrudModule::customcrud"/>
+        <add id="TrainingJaymin_CrudModule::managecustomcrud" title="Manage Crud"
+             module="TrainingJaymin_CrudModule" sortOrder="10"
+             action="customcrud/post" resource="TrainingJaymin_CrudModule::post"
+             parent="TrainingJaymin_CrudModule::customcrud"/>
+    </menu>
+</config>

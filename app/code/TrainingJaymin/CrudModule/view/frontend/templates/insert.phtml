@@ -1,0 +1,79 @@
+<?php
+$record = $block->getEditRecord();
+//print_r($record); die;
+$tags = explode(",",$record['tags']);
+//print_r($tags); die;
+?>
+<form method="post" action="<?php echo $this->getUrl() . 'crud/index/save'; ?>">
+
+    <legend class="legend"><span>Custom Add Form</span></legend><br>
+    <input type="hidden" value="<?php echo $record['post_id']; ?>" name="editRecordId">
+    <div class="field title">
+        <label class="label" for="title"><span>Name</span></label>
+        <div class="control">
+            <input name="name" id="name" title="Name" value="<?php echo $record['name']; ?>" class="input-text" type="text">
+        </div>
+    </div>
+    <div class="field author">
+        <label class="label" for="author"><span>Url Key</span></label>
+        <div class="control">
+            <select name="url_key" id="url_key">
+                <option value="">Choose</option>
+                <option value="1" <?php echo  ($record['url_key'] == 1)?"selected=selected":""; ?>>1</option>
+                <option value="2" <?php echo  ($record['url_key'] == 2)?"selected=selected":""; ?>>2</option>
+            </select>
+            <!--<input name="url_key" id="url_key" title="URL Key" value="<?php /*echo $record['url_key']; */?>" class="input-text" type="text">-->
+        </div>
+    </div>
+    <div class="field content">
+        <label class="label" for="content"><span>Post Content</span></label>
+        <div class="control">
+            <textarea name="post_content" id="post_content" title="Content" class="input-text" cols="5" rows="3">
+                <?php echo $record['post_content']; ?>
+            </textarea>
+        </div>
+    </div>
+    <div class="field author">
+        <label class="label" for="author"><span>Tags</span></label>
+        <div class="control">
+            <input type="checkbox" name="tags[]" id="tags[]" value="Open Source"
+                <?php
+                if(!empty($tags))
+                {
+                    foreach ($tags as $t)
+                    {
+                        if ($t == 'Open Source')
+                        {
+                            ?>
+                            checked=checked
+                            <?php
+                        }
+                    }
+                } ?>
+                /> Open Source
+            <input type="checkbox" name="tags[]" id="tags[]" value="Enterprise"
+                <?php
+                if(!empty($tags))
+                {
+                    foreach ($tags as $t)
+                    {
+                        if ($t == 'Enterprise')
+                        {
+                            ?>
+                            checked=checked
+                            <?php
+                        }
+                    }
+                } ?>  />Enterprise
+            <!--<input name="tags" id="tags" title="URL Key" value="<?php /*echo $record['tags']; */?>" class="input-text" type="text">-->
+        </div>
+    </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" title="Submit" class="action submit primary">
+                <span>Submit</span>
+            </button>
+        </div>
+    </div>
+</form>

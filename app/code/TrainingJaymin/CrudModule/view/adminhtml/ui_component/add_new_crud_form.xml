@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">add_new_crud_form.contacts_form_data_source</item>
+            <item name="deps" xsi:type="string">add_new_crud_form.contacts_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Add Crud Form</item>
+        <item name="layout" xsi:type="array">
+            <item name="type" xsi:type="string">tabs</item>
+        </item>
+
+        <item name="buttons" xsi:type="array">
+            <item name="back" xsi:type="string">TrainingJaymin\CrudModule\Block\Adminhtml\Contact\Edit\BackButton</item>
+            <item name="delete" xsi:type="string">TrainingJaymin\CrudModule\Block\Adminhtml\Contact\Edit\DeleteButton</item>
+            <item name="reset" xsi:type="string">TrainingJaymin\CrudModule\Block\Adminhtml\Contact\Edit\ResetButton</item>
+            <item name="save" xsi:type="string">TrainingJaymin\CrudModule\Block\Adminhtml\Contact\Edit\SaveButton</item>
+        </item>
+    </argument>
+
+    <dataSource name="contacts_form_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">TrainingJaymin\CrudModule\Model\Contact\DataProvider</argument>
+            <argument name="name" xsi:type="string">contacts_form_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">post_id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+    </dataSource>
+
+    <fieldset name="contact">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Add Crud Form</item>
+            </item>
+        </argument>
+
+        <!-- This field represents form id and is hidden -->
+        <field name="post_id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">false</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">contact</item>
+                </item>
+            </argument>
+        </field>
+
+        <!-- This field has data type 'text' and standard 'input' form element and looks like input -->
+        <field name="name">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">Name</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">contact</item>
+                </item>
+            </argument>
+        </field>
+        <field name="url_key">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="array">
+                    <item name="" xsi:type="array">
+                        <item name="value" xsi:type="string"></item>
+                        <item name="label" xsi:type="string" translate="true">Choose</item>
+                    </item>
+                    <item name="1" xsi:type="array">
+                        <item name="value" xsi:type="number">1</item>
+                        <item name="label" xsi:type="string" translate="true">1</item>
+                    </item>
+                    <item name="2" xsi:type="array">
+                        <item name="value" xsi:type="number">2</item>
+                        <item name="label" xsi:type="string" translate="true">2</item>
+                    </item>
+                </item>
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">Url Key</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">number</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="source" xsi:type="string">contact</item>
+                    <item name="dataScope" xsi:type="string">url_key</item>
+                    <item name="sortOrder" xsi:type="number">60</item>
+                </item>
+            </argument>
+        </field>
+        <textarea name="post_content">
+            <settings>
+                <cols>15</cols>
+                <rows>5</rows>
+                <label translate="true">Post Content </label>
+            </settings>
+        </textarea>
+        <fieldset name="tags" class="TrainingJaymin\CrudModule\Ui\Component\Form\CustomCheckbox">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">Custom Checkboxes</item>
+                </item>
+            </argument>
+        </fieldset>
+    </fieldset>
+
+</form>

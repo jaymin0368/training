@@ -140,6 +140,7 @@ return array (
     'Shopial_Facebook' => 1,
     'Temando_Shipping' => 1,
     'TrainingJaymin_CountdownTimer' => 1,
+    'TrainingJaymin_CrudModule' => 1,
     'TrainingJaymin_CustomerAccount' => 1,
     'TrainingJaymin_CustomerAttribute' => 1,
     'TrainingJaymin_IpRestriction' => 1,
