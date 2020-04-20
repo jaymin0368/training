@@ -20,14 +20,19 @@ class Index extends Action
 
     protected $helperData;
 
+    protected $_productCollectionFactory;
+
+
     public function __construct(
         Context $context,
         CustomIpAddressFactory $customIpAddressFactory,
-        \TrainingJaymin\IpRestriction\Helper\Data $helperData
+        \TrainingJaymin\IpRestriction\Helper\Data $helperData,
+        \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory
     ) {
         parent::__construct($context);
         $this->helperData = $helperData;
         $this->customIpAddressFactory = $customIpAddressFactory;
+        $this->_productCollectionFactory = $productCollectionFactory;
     }
 
     public function execute()
@@ -62,6 +67,55 @@ class Index extends Action
 
         echo $this->helperData->getGeneralConfig('enable');
         echo $this->helperData->getGeneralConfig('display_text');
+
+
+        //$categoryIds = array(2,4);//category id
+        $collection = $this->_productCollectionFactory->create();
+        $collection->addAttributeToSelect('*');
+        $collection->addAttributeToSort('entity_id','desc');
+        $collection->addCategoryIds();
+        //$collection->addFieldToFilter('category_id', "");
+
+        //$collection->setPageSize(3); // fetching only 3 products
+
+        $proIds=[];
+        foreach ($collection as $product)
+        {
+            /*print_r($product->getCategoryIds());
+            echo "<br>";*/
+            $proCats = $product->getCategoryIds();
+            if(!empty($proCats))
+            {
+
+                $productId = $product->getId();
+                //print_r($productId);
+                $catIds= array_push($proIds,$productId);
+            }
+
+        }
+        //print_r($proIds);
+        $collection = $this->_productCollectionFactory->create();
+        $collection->addAttributeToSelect('*');
+        $collection->addFieldToFilter('entity_id', array('nin' => $proIds));
+        $collection->addAttributeToSort('entity_id','desc');
+        $collection->addCategoryIds();
+        $collection->setPageSize(10); // fetching only 3 products
+        foreach ($collection as $product)
+        {
+            print_r($product->getData());
+            echo "<br>";
+            $categoryIds = [
+                5
+            ];
+            $categoryLinks = $this->helperData->getCategoryLink();
+            $categoryLinks->assignProductToCategories(
+                $product->getSku(),
+                $categoryIds
+            );
+            /*$proCats = $product->getCategoryIds();
+            $catIds= array_merge($catIds, $proCats);*/
+        }
+
 
     }
 }

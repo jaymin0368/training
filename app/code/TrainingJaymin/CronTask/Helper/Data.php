@@ -1,6 +1,6 @@
 <?php
 
-namespace TrainingJaymin\IpRestriction\Helper;
+namespace TrainingJaymin\CronTask\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Framework\App\Helper\Context;

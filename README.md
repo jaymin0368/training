@@ -56,4 +56,6 @@ Tasks added so far in this repository:
     a. Add/Update/Delete Module with following types of input elements: text, checkbox, drop-down, radio, multi-select, text-box, color-selection.
     	
     b.  Grid and Edit/Add Form should be manageable from both admin and front-end.
+10. Create a cron, in which the latest products (last 3 days) should get auto-assigned to a category.
     
+    a. Maximum number of products in that category should be 10. If there are no more products to assign, then it should persist the last added products.

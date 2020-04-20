@@ -15,4 +15,7 @@
                 TrainingJaymin\IpRestriction\Model\ResourceModel\CustomIpAddress</argument>
         </arguments>
     </virtualType>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\Collection">
+    <plugin name="TrainingJaymin_IpRestriction::productcollection" type="TrainingJaymin\IpRestriction\Model\Plugin\Productcollection" sortOrder="1" />
+</type>
 </config>
