@@ -61,3 +61,8 @@ Tasks added so far in this repository:
     a. Maximum number of products in that category should be 10. If there are no more products to assign, then it should persist the last added products.
     
 13. Create a custom shipping method with country selection and custom shipping price. - 4 Hours - Completed
+6. Cart Price Rules - Estimated Hours (1 hours) - Completed
+
+    a. Setup below cart rules and verify on frontend:
+        a.i. Free shipping on all the products of specific category
+        a.ii. Buy 1 Get 1 Free for specific products
